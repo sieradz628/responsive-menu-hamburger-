@@ -1,0 +1,127 @@
+@-webkit-keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #6e6e6e;
+}
+#header {
+  background-color: #fff;
+  box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+#header .logo {
+  text-decoration: none;
+  float: left;
+  color: #6e6e6e;
+  font-size: 3em;
+  padding: 20px;
+}
+#header #icon {
+  display: none;
+  cursor: pointer;
+}
+#header #icon .bar1,
+#header #icon .bar2,
+#header #icon .bar3{
+  width: 35px;
+  height: 5px;
+  background-color: #6e6e6e;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+#header ul#menu {
+  display: block;
+  float: right;
+  padding: 0px;
+}
+#header ul#menu li {
+  display: block;
+  float: left;
+  text-align: left;
+  text-decoration: none;
+}
+#header li a {
+  display: block;
+  text-decoration: none;
+  color: #6e6e6e;
+  font-size: 2em;
+  padding: 10px;
+  transition-duration: 0.4s;
+}
+#header li a:hover {
+  background-color: #6e6e6e;
+  color: #fff;
+}
+
+.headerHamburger{
+  position: absolute;
+  top:0px;
+  left:0px;
+  bottom: 0px;
+  right:0px;
+  transition-duration: 0.8s;
+}
+#header ul.menuHamburger{
+  position: absolute;
+  display: block!important;
+  top: 15%;
+  left:0;
+  right: 0;
+	-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+#header ul.menuHamburger li{
+  float: unset!important;
+  text-align: center!important;
+}
+
+.iconHamburger .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.iconHamburger .bar2 {opacity: 0;}
+.iconHamburger .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (max-width: 720px){
+  #header #icon {
+    display: block;
+    float: right;
+    padding: 25px;
+  }
+  #header ul#menu {
+    display: none;
+  }
+}
+
